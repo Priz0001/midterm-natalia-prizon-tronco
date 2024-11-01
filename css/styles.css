@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: "Lato", sans-serif;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* nav {
+    text-decoration: none;
+    justify-content: space-between;
+} */
