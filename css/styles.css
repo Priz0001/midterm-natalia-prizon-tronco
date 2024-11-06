@@ -4,17 +4,159 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-h1 {
-    font-family: "Playfair Display", serif;
-}
-
 header {
     display: flex;
     flex-direction: column;
+}
+
+h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 10px;
+}
+
+.stripe {
+    position: relative;
+}
+
+.stripe::after {
+    position:absolute;
+    content:"";
+    width: 100%;
+    height: 35%;
+    right: 0;
+    bottom: 12px;
+    background: #0B6BA9;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 10px 20px 10px;
+}
+
+
+.wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+}
+
+.content {
+    position: absolute;
+    bottom: 40px;
+}
+
+.background-img {
+    max-width:100%;    
+    vertical-align: middle;
+}
+
+.background-img img {
+    width: 100%;
+    height: 450px;
+    display: block;    
+    object-fit: cover;      
+}
+
+
+
+.locals div img {
+    width: 100%;
+}
+
+.button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: black;
+    color:white;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+nav a:last-child {
+    background-color: #0B6BA9;
+    border-radius: 20px;
+}
+
+.button:hover {
+    color: black;
+    background-color: #52E4D5;
+    border-radius: 20px;
+}
+
+.locals-menu {
+    display: flex;
+    flex-direction: column;
+    /* gap: 20px; */
+    align-items: center;
+}
+
+.locals-menu a {
+    width: fit-content;
+    padding: 10px 15px;
+}
+
+h4 {
+    font-size: 2rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 60px 20px 20px 20px;
+}
+
+.locals p {
+    font-size: 1.5rem;
+    font-weight:600;
     text-align: center;
 }
 
-/* nav {
-    text-decoration: none;
-    justify-content: space-between;
-} */
+.purple {
+    text-align: center;
+    background-color: #74007C;
+    border-radius: 20px;
+}
+
+.blue {
+    text-align: center;
+    background-color: #0B6BA9;
+    border-radius: 20px;
+}
+
+@media screen and (min-width: 500px) {
+
+    .locals-one {
+        grid-area: l1
+    }
+
+    .locals-two {
+        grid-area: l2
+    }
+
+    .locals-three {
+        grid-area: l3
+    }
+
+    .locals-four {
+        grid-area: l4
+    }
+
+    .locals-five {
+        grid-area: l5
+    }
+
+    .locals-six {
+        grid-area: l6
+    }
+
+    .locals {
+        display: grid;
+        gap: 1em;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "l1 l2 l3"
+        "l4 l5 l6"
+    }
+}
