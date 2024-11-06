@@ -63,9 +63,9 @@ nav {
 
 
 
-.locals div img {
+/* .locals div img {
     width: 100%;
-}
+} */
 
 .button {
     text-decoration: none;
@@ -92,11 +92,23 @@ nav a:last-child {
     flex-direction: column;
     /* gap: 20px; */
     align-items: center;
+
+}
+
+.stellar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stellar img {
+    width: 60%;
 }
 
 .locals-menu a {
-    width: fit-content;
-    padding: 10px 15px;
+    width: auto;
+    padding: 10px 20px;
+    margin: 20px;
 }
 
 h4 {
@@ -122,6 +134,18 @@ h4 {
     text-align: center;
     background-color: #0B6BA9;
     border-radius: 20px;
+}
+
+.separator {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.286);
+    margin: 20px;
+}
+
+footer {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media screen and (min-width: 500px) {
