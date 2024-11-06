@@ -47,6 +47,46 @@ nav {
 .content {
     position: absolute;
     bottom: 40px;
+    text-align: center;
+    width: -webkit-fill-available;
+}
+
+h3 {
+    font-size: 0.7rem;
+    font-weight:700;
+    word-spacing: 0.3rem;
+    /* margin: 0 40px; */
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 15px 40px;
+    line-height: 2.5rem;
+}
+
+.gradient {
+    background: -webkit-linear-gradient(0deg, #1887AD, #46CFCC);
+    background-size: 200% 100%;
+    background-position: 0% 0%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 800;
+
+    animation: textScroll 3s infinite alternate;
+}
+
+@keyframes textScroll {
+    from{
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+.content p {
+    line-height: 1.5rem;
+    margin: 0 20px;
 }
 
 .background-img {
@@ -56,16 +96,10 @@ nav {
 
 .background-img img {
     width: 100%;
-    height: 450px;
+    height: 410px;
     display: block;    
     object-fit: cover;      
 }
-
-
-
-/* .locals div img {
-    width: 100%;
-} */
 
 .button {
     text-decoration: none;
@@ -90,9 +124,11 @@ nav a:last-child {
 .locals-menu {
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
     align-items: center;
+}
 
+.locals-menu p {
+    margin: 10px;
 }
 
 .stellar {
@@ -107,7 +143,7 @@ nav a:last-child {
 
 .locals-menu a {
     width: auto;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 20px;
 }
 
@@ -119,7 +155,7 @@ h4 {
 }
 
 .locals p {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     font-weight:600;
     text-align: center;
 }
@@ -149,6 +185,10 @@ footer {
 }
 
 @media screen and (min-width: 500px) {
+
+    /* .wrapper {
+        border-radius: 50px;
+    } */
 
     .locals-one {
         grid-area: l1
