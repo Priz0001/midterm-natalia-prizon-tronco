@@ -4,20 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The System</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="container">
+        <ul class="skip-links">
+            <li><a href=#nav>Skip to main nav</a></li>
+            <li><a href="#main">Skil to main content</a></li>
+        </ul>
+    </div>
     <header>
-        <h1>THE <span class="stripe">SYSTEM</span></h1>
-        <nav>
-            <a class="button" href="#Planets">Planets</a>
-            <a class="button" href="#Interstellar">Interstellar</a>
-            <a class="button" href="#Contact">Contact</a>
-        </nav>
+        <div class="navbar">
+            <h1>THE <span class="stripe">SYSTEM</span></h1>
+            <nav id="nav">
+                <a href="#Planets">Planets</a>
+                <a href="#Interstellar">Interstellar</a>
+                <a class="contact" href="#Contact">Contact</a>
+            </nav>
+        </div>
         <div class="wrapper">
             <div class="content">
                 <h3>THE SYSTEM MAGAZINE</h3>
@@ -29,48 +40,48 @@
             </div>
         <div>
     </header>
-    <h4>Meet the Locals</h4>
+    <h4 id="main">Meet the Locals</h4>
     <section class="locals">
         <div class="stellar locals-one">
             <img src="images/sun.jpg" alt="image of the sun">
             <div class="locals-menu">
                 <p>The Sun</p>
-                <a href="#" class="button purple">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
         </div>
         <div class="stellar locals-two">
             <img src="images/mercury.jpg" alt="image of mercury">
             <div class="locals-menu">
                 <p>Mercury</p>
-                <a href="#" class="button purple">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
         </div>
         <div class="stellar locals-three">
             <img src="images/venus.jpg" alt="image of venus">
             <div class="locals-menu">
                 <p>Venus</p>
-                <a href="#" class="button purple">Learn More</a>
+                <a href="https://en.wikipedia.org/wiki/Venus">Learn More</a>
             </div>
         </div>
         <div class="stellar locals-four">
             <img src="images/earth.jpg" alt="image of earth">
             <div class="locals-menu">
                 <p>Earth</p>
-                <a href="#" class="button blue">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
         </div>
         <div class="stellar locals-five">
             <img src="images/moon.jpg" alt="image of the moon">
             <div class="locals-menu">
                 <p>The Moon</p>
-                <a href="#" class="button purple">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
         </div>
         <div class="stellar locals-six">
             <img src="images/mars.jpg" alt="image of mars">
             <div class="locals-menu">
                 <p>Mars</p>
-                <a href="#" class="button blue">Learn More</a>
+                <a href="#">Learn More</a>
             </div>
         </div>
     </section>

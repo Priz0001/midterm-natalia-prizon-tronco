@@ -4,6 +4,30 @@ body {
     font-family: "Lato", sans-serif;
 }
 
+.skip-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.skip-links a {
+    position: absolute;
+    top: -3em;
+    background-color: white;
+    color: black;
+    padding: .5em 1em;
+    font-weight: bold;
+    border-bottom: 4px solid red;
+    z-index: 10;
+    transition: transform 1s ease, top 1s ease;
+}
+
+.skip-links a:focus {
+    top: 0em;
+    transform: translateY(1px);
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -49,13 +73,13 @@ nav {
     bottom: 40px;
     text-align: center;
     width: -webkit-fill-available;
+    z-index: 5;
 }
 
 h3 {
     font-size: 0.7rem;
     font-weight:700;
     word-spacing: 0.3rem;
-    /* margin: 0 40px; */
 }
 
 h2 {
@@ -65,18 +89,17 @@ h2 {
 }
 
 .gradient {
-    background: -webkit-linear-gradient(0deg, #1887AD, #46CFCC);
+    background: -webkit-linear-gradient(0deg, #0B6BA9, #52E4D5);
     background-size: 200% 100%;
     background-position: 0% 0%;
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     font-weight: 800;
-
     animation: textScroll 3s infinite alternate;
 }
 
 @keyframes textScroll {
-    from{
+    from {
         background-position: 0% 0%;
     }
     to {
@@ -98,27 +121,42 @@ h2 {
     width: 100%;
     height: 410px;
     display: block;    
-    object-fit: cover;      
+    object-fit: cover;    
 }
 
-.button {
-    text-decoration: none;
-    padding: 10px 20px;
-    background-color: black;
-    color:white;
-    font-weight: bold;
-    padding: 10px 20px;
-}
-
-nav a:last-child {
+.contact {
     background-color: #0B6BA9;
     border-radius: 20px;
 }
 
-.button:hover {
+a {
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: scale 0.2s;
+}
+
+.locals a {
+    background-color: #0B6BA9;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+a:focus {
+    outline: 4px solid red;
+    border-radius: 20px;
+}
+
+/* a:visited {
+    background-color: purple;
+} */
+
+a:hover {
     color: black;
     background-color: #52E4D5;
     border-radius: 20px;
+    scale: 1.1;
 }
 
 .locals-menu {
@@ -141,35 +179,28 @@ nav a:last-child {
     width: 60%;
 }
 
-.locals-menu a {
+/* .locals-menu a {
     width: auto;
     padding: 10px 15px;
-    margin: 20px;
-}
+    margin: 20px 0;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    background-color: #0B6BA9;
+    border-radius: 20px;
+} */
 
 h4 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
-    margin: 60px 20px 20px 20px;
+    margin: 40px 20px 20px 20px;
 }
 
 .locals p {
-    /* font-size: 1.5rem; */
     font-weight:600;
     text-align: center;
-}
-
-.purple {
-    text-align: center;
-    background-color: #74007C;
-    border-radius: 20px;
-}
-
-.blue {
-    text-align: center;
-    background-color: #0B6BA9;
-    border-radius: 20px;
 }
 
 .separator {
@@ -182,13 +213,25 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 @media screen and (min-width: 500px) {
 
-    /* .wrapper {
-        border-radius: 50px;
-    } */
+    .wrapper {
+        box-shadow: rgba(255, 255, 255, 0.12) 10px 10px 60px;
+    }
+
+    .content {
+        text-align:left;
+        margin: 30px 0 0 30px;
+    }
+
+    .content h2,
+    .content p {
+        margin-left: 0;
+    }
 
     .locals-one {
         grid-area: l1
@@ -223,4 +266,58 @@ footer {
         "l1 l2 l3"
         "l4 l5 l6"
     }
+}
+
+@media screen and (min-width: 1100px) {
+
+    body{
+        width: 70%;
+        margin: auto;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar a {
+        margin: 0 20px;
+    }
+
+    h1 {
+        margin-left: 0;
+    }
+
+    nav {
+        margin-right: 0;
+    }
+
+    h4 {
+        text-align: left;
+    }
+ 
+    .locals {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .wrapper {
+        border-radius: 30px;
+    }
+
+    .background-img img {
+        animation: zoom 6s infinite alternate ease-in-out;
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(1);
+        }
+    
+        to {
+            transform: scale(1.1);
+        }
+    }
+
 }
