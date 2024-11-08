@@ -76,9 +76,11 @@ nav a {
 .content {
     position: absolute;
     bottom: 40px;
-    text-align: center;
-    width: -webkit-fill-available;
     z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 h3 {
@@ -153,7 +155,7 @@ a:focus {
     border-radius: 20px;
 }
 
-a:visited {
+.locals a:visited {
     background-color: purple;
 }
 
@@ -312,5 +314,4 @@ footer {
             transform: scale(1.1);
         }
     }
-
 }
